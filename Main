@@ -1,0 +1,184 @@
+/**
+ * @name ClearVision V6 + a lot of stuff
+ * @author (CCSS) Nyx, (OG) Zerthox, (MT) CV Team, (HSL/RS) Gibbu, (Slate) Gibbu + Tropical
+ * @version 6 BETA
+ * @description DM Nyx#9567 [393900343135830016] for help with css, join support server for help with CV. This is CVv6 modified. Credits in css file @ https://nyxisbad.github.io/nyxcustomcss/codev2.css. 
+ * @source https://github.com/ClearVision/v6
+ * @website https://clearvision.gitlab.io/join
+ * @invite 7pNUC9C
+ */
+
+
+/*
+A note from Nyx:
+CSS is now stored in my github
+If you want to use code from it/change it to fit your theme, just credit me
+big credit to ppl in descriptions, love you cv/gibbu/tropical/leafy/all you wonderful lads in BD server
+support server link is to CV!
+*/
+
+/*---------- IMPORT CSS -----------*/
+/*Updated 20/08/2020, huge thanks to gibbu, the cv team, and nfld*/
+@import url(https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Fonts/Yes.css); 
+/*NFLD's Fonts and stuff*/
+@import url(https://clearvision.gitlab.io/v6/main.css);
+@import url(https://gibbu.github.io/BetterDiscord-Themes/HorizontalServerlist/base.css);
+@import url(https://gibbu.github.io/BetterDiscord-Themes/RadialStatus/base.css);
+@import url(https://nyxisbad.github.io/nyxcustomcss/codev2.css);
+/*---------- MemberCount Fix ----------*/
+#MemberCount{
+  background: transparent !important;
+}
+/*---------- Optional ----------*/
+/*Wanted to have some things that you could toggle on and off without having to check the theme file.*/
+/*Hides Explore Button*/
+div[aria-label="Servers"] + .tutorialContainer-SGrQ1h + .listItem-2P_4kh { 
+  display: none !important;
+} 
+.toolbar-1t6TWx a {
+  display:none;
+} /* Deletes Help Icon */
+/*Changes DV Text Colors; if you think this is aids, comment it*/
+/*
+.dv-time,.dv-weekday,#dv-main .dv-date,.layer-v9HyYc { 
+  color: var(--text-color) !important;
+} */
+/*---------- Settings ----------*/
+:root {
+  /* How Square do you want things */
+  --square-border-radius: 4px; /*default 4, applies to channel tabs icons, chat avatars*/
+  --circle-border-radius: 50%; /*default 50%, important for glow*/
+  
+  /* Radial Status */    
+  --rs-small-spacing: 2px;
+  --rs-large-spacing: 3px;
+  --rs-width: 2px;
+  --rs-avatar-shape: 10%; /*member list squared icons*/
+  --rs-online-color: var(--online-color);
+  --rs-idle-color: var(--idle-color);
+  --rs-dnd-color: var(--dnd-color);
+  --rs-offline-color: var(--offline-color);
+  --rs-streaming-color: var(--streaming-color);
+  --rs-invisible-color: var(--offline-color);
+  
+  /* Channel Tabs */
+  --channelTabs-tabWidth: 130px;
+  --channelTabs-tabHeight: 20px;
+  --channelTabs-favHeight: 20px;
+  
+  /* Customization Patch -Scars */
+  --channel-unread: var(--main-color); /* Unread Server channel color. [default: var(--main-color)] THIS OVERRIDES YOUR MAIN COLOR*/
+  --channel-color: rgba(255,255,255,.5); /*Read Server channel color [default: rgba(255,255,255,0.3);]*/
+  --muted-color: rgba(255,255,255,.2); /*Muted channel color [default: rgba(255,255,255,0.1);]*/
+  --url-color: var(--main-color); /*The color of url links [default: var(--main-color)]*/
+  
+  /* HORIZONTAL SERVER LIST */
+  --HSL-size: 50px; /* Size of Server Icons */
+  --HSL-spacing: 5px; /* Space between servers */
+  
+  /* Gradients */
+  --from-gradient-color: rgba(237, 0, 240, 1);
+  --to-gradient-color: var(--main-color);
+  --gradient-rotation: -30deg;
+  
+  /* ACCENT COLORS */
+  --main-color: rgba(129,0,187,1); /* FYI if you change this you'll also have to change ping color */
+  --hover-ping-border-color: rgba(129,0,187,.8); /*Hovered Borders*/
+  --hover-ping-fill-color: rgba(129,0,187,.2); /*Hovered Fill*/
+  --hover-gradient-color: rgba(237,0,240,.2); /*Hovered Fill Gradient*/
+  --ping-border-color: rgba(129,0,187,.7); /*Unhovered Borders*/
+  --ping-fill-color: rgba(129,0,187,.1); /*Unhovered Fill*/
+  --ping-gradient-color: rgba(237,0,240,.1); /*Unhovered Fill Gradient*/
+  --hover-color: #2dd3fc; /* hover accent color (hex, rgb or hsl) [default: #1e63b3] */
+  --success-color: #43b581; /* success accent color (hex, rgb or hsl) [default: #43b581] */
+  --danger-color: #982929; /* danger accent color (hex, rgb or hsl) [default: #982929] */
+  --text-color: #47c4ff;
+
+  /* STATUS COLORS */
+  --online-color: #47cbff; /* online status color (hex, rgb or hsl) [default: #43b581] */
+  --idle-color: #faa61a; /* idle status color (hex, rgb or hsl) [default: #faa61a] */
+  --dnd-color: #750c3f; /* dnd status color (hex, rgb or hsl) [default: #982929] */
+  --streaming-color: #310480; /* streaming status color (hex, rgb or hsl) [default: #593695] */
+  --offline-color: #808080; /* offline/invisible status color (hex, rgb or hsl) [default: #808080] */
+  
+  /* APP BACKGROUND */
+  --background-shading: 60%; /* app background shading (0 for complete smoothness) [default: 100%] */
+  --background-overlay: rgba(0, 0, 0, .15); /* app background overlay color/gradient [default: rgba(0, 0, 0, 0.6)] */
+  --background-image: url(https://i.imgur.com/Qe09WHc.jpg); /*url(https://imgur.com/uhIuaRC.jpg);*/ /*url(https://imgur.com/uhIuaRC.jpg);*/
+  --background-position: center; /* app background position [default: center] */
+  --background-size: cover; /* app background size [default: cover] */
+  --background-repeat: no-repeat; /* app background repeat [default: no-repeat] */
+  --background-attachment: fixed; /* app background attachment [default: fixed] */
+  --background-brightness: 100%; /* app background brightness (< 100% for darken, > 100% for lighten) [default: 100%] */
+  --background-contrast: 100%; /* app background contrast [default: 100%] */
+  --background-saturation: 100%; /* app background saturation [default: 100%] */
+  --background-invert: 0%; /* app background invert (0 - 100%)  [default: 0%] */
+  --background-grayscale: 0%; /* app background grayscale ( 0 - 100%) [default: 0%] */
+  --background-sepia: 0%; /* app background sepia (0 - 100%) [default: 0%] */
+  --background-blur: 0px; /* app background blur [default: 0px] */
+
+  /* GENERAL */
+  --main-font: Bahnschrift; /*Because of the import at the top by NFLD you can use basically every font @ google fonts. Replace the first one*/ /*Default: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif*/
+  --code-font: Consolas, Liberation Mono, Menlo, Courier, monospace; /* font for codeblocks (font must be installed) [default: Consolas, Liberation Mono, Menlo, Courier, monospace] */
+  --channels-width: 230px; /* channel list width (240px for Discord default) [default: 220px] */
+  --members-width: 240px; /* member list width [default: 240px] */
+  --avatar-roundness: 50%; /* This DOES NOT WORK. Leaving here for history's sake - Nyx */
+  
+  /* HOME BUTTON ICON */
+  --home-icon: url(https://i.imgur.com/ASQQoGO.png); /* home button icon (link must be HTTPS) [default: url(https://clearvision.gitlab.io/icons/discord.svg)]*/
+  --home-position: center; /* home button icon position [default: center] */
+  --home-size: 60px; /* home button icon size [default: 40px] */
+  
+  /* MODAL BACKDROP */
+  --backdrop-overlay: rgba(0, 0, 0, 0.8); /* modal backdrop overlay color/gradient [default: rgba(0, 0, 0, 0.8)] */
+  --backdrop-image: var(--background-image); /* modal backdrop image (link must be HTTPS) [default: var(---background-image)] */
+  --backdrop-position: var(--background-position); /* modal backdrop position [default: var(---background-position)] */
+  --backdrop-size: var(--background-size); /* modal backdrop size [default: var(---background-size)] */
+  --backdrop-repeat: var(--background-repeat); /* modal backdrop repeat [default: var(---background-repeat)] */
+  --backdrop-attachment: var(--background-attachment); /* modal backdrop attachment [default: var(--background-attachment)] */
+  --backdrop-brightness: var(--background-brightness); /* modal backdrop brightness (< 100% for darken, > 100% for lighten) [default: var(---background-brightness)] */
+  --backdrop-contrast: var(--background-contrast); /* modal backdrop contrast [default: var(---background-contrast)] */
+  --backdrop-saturation: var(--background-saturation); /* modal backdrop saturation [default: var(---background-saturation)] */
+  --backdrop-invert: var(--background-invert); /* modal backdrop invert (0 - 100%)  [default: var(---background-invert)] */
+  --backdrop-grayscale: var(--background-grayscale); /* modal backdrop grayscale ( 0 - 100%) [default: var(---background-grayscale)] */
+  --backdrop-sepia: var(--background-sepia); /* modal backdrop sepia (0 - 100%) [default: var(---background-sepia)] */
+  --backdrop-blur: var(--background-blur); /* modal backdrop blur [default: var(--background-blur)] */
+  
+  /* USER POPOUT BACKGROUND */
+  --user-popout-image: var(--background-image); /* app background image (link must be HTTPS) [default: var(---background-image)] */
+  --user-popout-position: var(--background-position); /* user popout background position [default: var(---background-position)] */
+  --user-popout-size: var(--background-size); /* user popout background size [default: var(---background-size)] */
+  --user-popout-repeat: var(--background-repeat); /* user popout background repeat [default: var(---background-repeat)] */
+  --user-popout-attachment: var(--background-attachment); /* user popout background attachment [default: var(--background-attachment)] */
+  --user-popout-brightness: var(--background-brightness); /* user popout background brightness (< 100% for darken, > 100% for lighten) [default: var(---background-brightness)] */
+  --user-popout-contrast: var(--background-contrast); /* user popout background contrast [default: var(---background-contrast)] */
+  --user-popout-saturation: var(--background-saturation); /* user popout background saturation [default: var(---background-saturation)] */
+  --user-popout-invert: var(--background-invert); /* user popout background invert (0 - 100%) [default: var(---background-invert)] */
+  --user-popout-grayscale: var(--background-grayscale); /* user popout background grayscale (0 - 100%) [default: var(---background-grayscale)] */
+  --user-popout-sepia: var(--background-sepia); /* user popout background sepia (0 - 100%) [default: var(---background-sepia)] */
+  --user-popout-blur: calc(var(--background-blur) + 3px); /* user popout background blur [default: calc(var(--background-blur) + 3px)] */
+  
+  /* USER MODAL BACKGROUND */
+  --user-modal-image: var(--background-image); /* app background image (link must be HTTPS) [default: var(---background-image)] */
+  --user-modal-position: var(--background-position); /* user modal background position [default: var(---background-position)] */
+  --user-modal-size: var(--background-size); /* user modal background size [default: var(---background-size)] */
+  --user-modal-repeat: var(--background-repeat); /* user modal background repeat [default: var(---background-repeat)] */
+  --user-modal-attachment: var(--background-attachment); /* user modal background attachment [default: var(--background-attachment)] */
+  --user-modal-brightness: var(--background-brightness); /* user modal background brightness (< 100% for darken, > 100% for lighten) [default: var(---background-brightness)] */
+  --user-modal-contrast: var(--background-contrast); /* user modal background contrast [default: var(---background-contrast)] */
+  --user-modal-saturation: var(--background-saturation); /* user modal background saturation [default: var(---background-saturation)] */
+  --user-modal-invert: var(--background-invert); /* user modal background invert (0 - 100%) [default: var(---background-invert)] */
+  --user-modal-grayscale: var(--background-grayscale); /* user modal background grayscale (0 - 100%) [default: var(---background-grayscale)] */
+  --user-modal-sepia: var(--background-sepia); /* user modal background sepia (0 - 100%) [default: var(---background-sepia)] */
+  --user-modal-blur: calc(var(--background-blur) + 3px); /* user modal background blur [default: calc(var(--background-blur) + 3px)] */
+
+  --spacing: 10px; 
+  
+  /* THEMES BBD COLORS */
+  --bd-blue: var(--main-color);
+  --bd-blue-hover: var(--hover-color);
+  --bd-blue-active: var(--hover-color);
+  --text-normal: rgb(220, 221, 222); /* color of default discord text */
+  --text-muted:  rgb(114, 118, 125); /* color of default discord muted text (text found in input fields before typing).*/
+  
+}
